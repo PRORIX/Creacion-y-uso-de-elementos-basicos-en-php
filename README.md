@@ -125,7 +125,7 @@ Code:
 <?php
 
 /**
- * Programa que determina si una edad es menor o mayor de edad
+ * Programa que determina si un numero es positivo, negativo o cero
  * @author prorix
  * @version 1.0.0
  */
