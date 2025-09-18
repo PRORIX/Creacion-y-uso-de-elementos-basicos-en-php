@@ -204,7 +204,7 @@ Code:
     calcularNota($notaNoValida2);
 
 /**
- * Función que determina la calificacion segun la nota
+ * Funcion que determina la calificacion segun la nota
  */
 function calcularNota($nota){
     if ($nota < 0 || $nota > 10) {
