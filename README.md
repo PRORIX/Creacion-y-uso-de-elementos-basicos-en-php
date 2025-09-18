@@ -551,3 +551,299 @@ El factorial de 5 es 120
 ## BLOQUE 3: Combinando condicionales y Bucles
 ### EJERCICIO 11: Numeros primos
 #### Escribe un algoritmo que muestre los numeros primos entre 1 y 50.
+
+Code:
+
+```php
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+/**
+ * Programa que muestra los números primos entre 1 y 50
+ * @author prorix
+ * @version 1.0.0
+ */
+
+function mostrarPrimos() {
+
+    for ($i = 2; $i <= 50; $i++) {
+        $esPrimo = true;
+
+        for ($j = 2; $j <= sqrt($i); $j++) {
+            if ($i % $j == 0) {
+                $esPrimo = false;
+                break;
+            }
+        }
+
+        if ($esPrimo) {
+            echo $i . " ";
+        }
+    }
+}
+
+mostrarPrimos();
+
+?>
+
+</body>
+</html>
+
+```
+
+Output:
+
+```
+
+ 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 
+
+```
+
+
+### EJERCICIO 12: Fibonacci
+#### Genera los primeros 20 terminos de la secuencia de Fibonacci.
+
+Code:
+
+```php
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+/**
+ * Programa que muestra los primeros 20 numeros de la secuencia de Fibonacci
+ * @author prorix
+ * @version 1.0.0
+ */
+
+function primerosVeinteFibonacci() {
+    $numero1 = 0;
+    $numero2 = 1;
+    echo "$numero1, $numero2";
+
+    for ($i = 3; $i <= 20; $i++) {
+        $numeroResultado = $numero1 + $numero2;
+        echo ", $numeroResultado";
+        $numero1 = $numero2;
+        $numero2 = $numeroResultado;
+    }
+}
+
+primerosVeinteFibonacci();
+
+?>
+
+</body>
+</html>
+
+```
+
+Output:
+
+```
+
+ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181
+
+```
+
+
+### EJERCICIO 13: Multiplos de un numero
+#### Pide un numero n y muestra sus multiplos hasta 100
+
+Code:
+
+```php
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+/**
+ * Programa que dado un numero muestra sus multiplos hasta 100
+ * @author prorix
+ * @version 1.0.0
+ */
+
+function mostrarMultiplos($numero) {
+	$resultado = 0;
+    $multiplo = 1;
+    
+    while ($resultado < 100) {
+        $resultado = $numero * $multiplo;
+        echo "$resultado <br>";
+        $multiplo++;
+    }
+}
+
+$numeroEjemplo = 10;
+mostrarMultiplos($numeroEjemplo);
+
+?>
+
+</body>
+</html>
+
+```
+
+Output:
+
+```
+
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100 
+
+```
+
+
+### EJERCICIO 14: Suma de pares e impares
+#### Calcula la suma de los numeros pares e impares entre 1 y 100 por separado.
+
+Code:
+
+```php
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+/**
+ * Programa que suma por separado los pares e impares entre 1 y 100
+ * @author prorix
+ * @version 1.0.0
+ */
+
+function sumaParesImpares() {
+	$resultadoPares = 0;
+    $resultadoImpares = 0;
+    
+    for ($i = 1 ; $i <= 100 ; $i++) {
+        if ( $i % 2 == 0 ) {
+        	$resultadoPares += $i;
+        } else {
+        	$resultadoImpares += $i;
+        }
+    }
+    echo "Pares: $resultadoPares <br>";
+    echo "Impares: $resultadoImpares";
+}
+
+sumaParesImpares();
+
+?>
+
+</body>
+</html>
+
+```
+
+Output:
+
+```
+
+Pares: 2550
+Impares: 2500 
+
+```
+
+
+### EJERCICIO 15: Adivinar numero
+#### Genera un numero aleatorio entre 1 y 20 y pide al usuario que adivine.
+
+Code:
+
+```php
+
+TODO
+
+```
+
+Output:
+
+```
+
+TODO
+
+```
+
+
+## BLOQUE 4: Construccion de algoritmos
+### EJERCICIO 16: Numero perfecto
+#### Comprueba si un numero es perfecto
+
+Code:
+
+```php
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+/**
+ * Programa que comprueba si un numero es perfecto
+ * @author prorix
+ * @version 1.0.0
+ */
+
+function numeroPerfecto($numero) {
+	$suma = 0;
+    
+    
+    for ($i = 1 ; $i < $numero ; $i++) {
+        if ( $numero % $i == 0 ) {
+        	$suma += $i;
+        }
+    }
+    
+    if ($suma == $numero){
+    	echo "$numero es un numero perfecto <br>";
+    } else{
+    	echo "$numero no es un numero perfecto <br>";
+    }
+
+}
+
+$numeroPerfecto = 6;
+$numeroNoPerfecto = 5;
+numeroPerfecto($numeroPerfecto);
+numeroPerfecto($numeroNoPerfecto);
+
+?>
+
+</body>
+</html>
+
+```
+
+Output:
+
+```
+
+6 es un numero perfecto
+5 no es un numero perfecto 
+
+```
+
+
+### EJERCICIO 17: Invertir numero
+#### Escribe un algoritmo que invierta los digitos de un numero
