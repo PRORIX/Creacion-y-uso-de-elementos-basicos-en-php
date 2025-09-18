@@ -138,9 +138,7 @@ Code:
     positivoNegativoCero($numeroNegativo);
     positivoNegativoCero($cero);
 
- /**
- * Metodo que determina si una edad dada es menor o mayor de edad
- */
+
  function positivoNegativoCero($numero){
  	$resultado = "El numero $numero es positivo <br>";
     
