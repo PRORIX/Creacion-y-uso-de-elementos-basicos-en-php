@@ -518,9 +518,7 @@ $numeroEjemplo = 5;
 echo "El factorial de $numeroEjemplo es " . calcularFactorial($numeroEjemplo);
 
 /**
- * Función que calcula el factorial de un numero
- * @param int $numero del que se quiere calcular el factorial
- * @return factorial del número
+ * Funcion que calcula el factorial de un numero
  */
 function calcularFactorial($numero){
     $factorial = 1;
@@ -563,7 +561,7 @@ Code:
 <?php
 
 /**
- * Programa que muestra los números primos entre 1 y 50
+ * Programa que muestra los numeros primos entre 1 y 50
  * @author prorix
  * @version 1.0.0
  */
@@ -938,5 +936,115 @@ Output:
 
 reconocer es un palindromo
 melocoton no es un palindromo 
+
+```
+
+
+### EJERCICIO 19: Maximo comun divisor
+#### Escribe un alogirtmo que calcule el MCD de dos numeros
+
+Code:
+
+```php
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+/**
+ * Programa que calcula el MCD de dos numeros
+ * @author prorix
+ * @version 1.0.0
+ */
+
+function calcularMCD($numero1, $numero2) {
+    $numeroMenor = min($numero1, $numero2);
+    $mcd = 1;
+
+    for ($i = $numeroMenor; $i > 0; $i--) {
+        if ($numero1 % $i == 0 && $numero2 % $i == 0) {
+            $mcd = $i;
+            break;
+        }
+    }
+    echo "El MCD de $numero1 y $numero2 es $mcd.";
+}
+
+$numero1ejemplo = 10;
+$numero2ejemplo = 5;
+
+calcularMCD($numero1ejemplo, $numero2ejemplo);
+
+?>
+
+</body>
+</html>
+
+```
+
+Output:
+
+```
+
+ El MCD de 10 y 5 es 5. 
+
+```
+
+
+### EJERCICIO 20: Triangulo de asteriscos
+#### Muestra en pantalla un triangulo de altura ```n``` usando ```*```.
+
+Code:
+
+```php
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+/**
+ * Programa que dibuja un triangulo de tamano n dado
+ * @author prorix
+ * @version 1.0.0
+ */
+
+function dibujarTriangulo($tamano) {
+    for ($i = 1; $i <= $tamano; $i++) {
+        for ($j = 0; $j < $i; $j++) {
+            echo "*";
+        }
+        echo "<br>";
+    }
+}
+
+$tamanoPrueba = 10;
+
+dibujarTriangulo($tamanoPrueba);
+
+?>
+
+</body>
+</html>
+
+```
+
+Output:
+
+```
+
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
 
 ```
