@@ -847,3 +847,96 @@ Output:
 
 ### EJERCICIO 17: Invertir numero
 #### Escribe un algoritmo que invierta los digitos de un numero
+
+Code:
+
+```php
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+/**
+ * Programa que invierte un numero
+ * @author prorix
+ * @version 1.0.0
+ */
+
+function invertirNumero($numero) {
+    
+$numeroInvertido = strrev($numero);
+echo "$numero invertido es $numeroInvertido";
+
+}
+
+$numeroEjemplo = 123;
+invertirNumero($numeroEjemplo);
+
+?>
+
+</body>
+</html>
+
+```
+
+Output:
+
+```
+
+ 123 invertido es 321 
+
+```
+
+
+### EJERCICIO 18: Palindromo
+#### Comprueba si una palabra almacenada en una variable es palindroma.
+
+Code:
+
+```php
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+
+/**
+ * Programa que comprueba si una palabra es palindroma
+ * @author prorix
+ * @version 1.0.0
+ */
+
+function comprobarPalindroma($palabra) {
+    
+$palabraInvertida = strrev($palabra);
+if ($palabraInvertida == $palabra){
+	echo "$palabra es un palindromo <br>";
+} else {
+	echo "$palabra no es un palindromo <br>";
+}
+}
+
+$palabraPalindroma = "reconocer";
+$palabraNoPalindroma = "melocoton";
+comprobarPalindroma($palabraPalindroma);
+comprobarPalindroma($palabraNoPalindroma);
+
+
+?>
+
+</body>
+</html>
+
+```
+
+Output:
+
+```
+
+reconocer es un palindromo
+melocoton no es un palindromo 
+
+```
