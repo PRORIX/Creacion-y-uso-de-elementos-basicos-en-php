@@ -258,7 +258,7 @@ Code:
 <?php
 
 /**
- * Programa que muestra todos los números del 1 al 100
+ * Programa que muestra todos los numeros del 1 al 100
  * @author prorix
  * @version 1.0.0
  */
@@ -401,7 +401,7 @@ Code:
 <?php
 
 /**
- * Programa que muestra todos los números pares entre 1 y 50
+ * Programa que muestra todos los numeros pares entre 1 y 50
  * @author prorix
  * @version 1.0.0
  */
